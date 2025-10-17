@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "serve": "concurrently 'php artisan serve' 'bun run dev'"
     },
     "devDependencies": {
         "@shufo/prettier-plugin-blade": "^1.16.1",
