@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get("/note/{note}", function (Note $note) {
     return $note;
 });
+
+Route::view("/create", "create");
