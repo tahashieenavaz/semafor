@@ -5,7 +5,13 @@
         </main>
 
         <aside>
-            sdfsdfsf
+            @forelse($notes as $note)
+                <a href="{{ $note->url() }}">
+                    {{ $note->title }}
+                </a>
+            @empty
+                No notes yet.
+            @endforelse
         </aside>
     </div>
 </x-layout>
