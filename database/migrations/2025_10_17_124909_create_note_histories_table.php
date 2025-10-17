@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('note_histories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("note_id");
+            $table->string("title");
+            $table->text("content");
             $table->timestamps();
         });
     }
