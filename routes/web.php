@@ -4,7 +4,8 @@ use App\Models\Note;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $notes = Note::all();
+    return view('welcome', compact("notes"));
 });
 
 Route::get("/note/{note}", function (Note $note) {
